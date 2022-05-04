@@ -9,9 +9,9 @@ const Effects = () => {
         console.log("I have loaded!")
     }, [])
 
-    useEffect(() => {
-        console.log("I fire on every update!")
-    })
+    // useEffect(() => {
+    //     console.log("I fire on every update!")
+    // })
 
     useEffect(() => {
         console.log("I fire when something important happens.")
@@ -23,6 +23,21 @@ const Effects = () => {
             setSpecialVal(prev => prev + 1);
         }
     }
+
+    useEffect(() => {
+
+        console.log("I fire when something happens...")
+
+        const timer = setTimeout(() => {
+            console.log("...but I wait for 3 seconds before doing much!");
+        }, 3000)
+
+        return () => {
+            clearTimeout(timer);
+            console.log("And now I get cleaned up.")
+        }
+
+    }, [val]);
 
     return <div>
             <h2>Beers!</h2>
