@@ -1,9 +1,14 @@
 import React from "react";
-
-import { TestComponent } from './components';
+import { TestComponent, NotePad, DisplayHolder } from './components';
 
 const App = () => {
-    return <TestComponent />
+
+    const styles = { color: "red" };
+
+    return <>
+            <h1>App</h1>
+            <DisplayHolder theme={styles} />
+           </>
 }
 
 export default App;

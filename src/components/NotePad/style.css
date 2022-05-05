@@ -1,0 +1,14 @@
+.note {
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 0.3rem;
+    background-color: rgb(255, 187, 0);
+    color: darkblue;
+}
+
+#notes-container {
+    height: 50vh;
+    overflow: scroll;
+    padding: 3rem;
+    mask-image: linear-gradient(to bottom, transparent 10%, black);
+}
