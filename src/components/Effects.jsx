@@ -28,12 +28,12 @@ const Effects = () => {
 
         console.log("I fire when something happens...")
 
-        const timer = setTimeout(() => {
-            console.log("...but I wait for 3 seconds before doing much!");
+        const timer = setInterval(() => {
+            console.log("I do stuff every 3 seconds");
         }, 3000)
 
         return () => {
-            clearTimeout(timer);
+            clearInterval(timer);
             console.log("And now I get cleaned up.")
         }
 
