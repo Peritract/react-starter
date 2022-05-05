@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { ExampleContext } from '../../contexts';
 
-const Display = ({ theme }) => {
-    return <h1 style={theme}>Themed!</h1>
+const Display = () => {
+
+    const themes = useContext(ExampleContext);
+
+    return <h1 style={themes}>Themed!</h1>
 }
 
 export default Display;

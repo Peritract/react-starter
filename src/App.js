@@ -1,13 +1,16 @@
 import React from "react";
 import { TestComponent, NotePad, DisplayHolder } from './components';
+import { ExampleContext } from "./contexts";
 
 const App = () => {
 
-    const styles = { color: "red" };
+    const styles = { color: "magenta" };
 
     return <>
-            <h1>App</h1>
-            <DisplayHolder theme={styles} />
+            <ExampleContext.Provider value={styles}>
+                <h1 style={styles}>App</h1>
+                <DisplayHolder />
+            </ExampleContext.Provider>
            </>
 }
 
